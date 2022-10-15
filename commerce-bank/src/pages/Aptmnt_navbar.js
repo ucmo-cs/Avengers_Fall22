@@ -36,6 +36,9 @@ function Aptmnt_navbar() {
                     </a>
                 </li>
             </ul>
+
+            {/* Hero image. Title can be customized. */}
+            <h1 id="hero_img">Placeholder Title</h1>
         </>
     );
 }

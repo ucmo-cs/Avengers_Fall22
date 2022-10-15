@@ -9,7 +9,8 @@ ul {
     position: fixed;
     top: 0;
     width: 100%;
-    box-shadow: 0 2px 5px #888888 ;
+    box-shadow: 0 2px 5px #888888;
+    background-color: white;
 }
 li {
     float: left;
@@ -27,4 +28,13 @@ a img {
 #img_btn {
     padding-top: 4px;
     padding-bottom: 0;
+}
+
+/* For the hero image. */
+#hero_img {
+    padding: 3em;
+    margin: 1.25em;
+    margin-inline: 0;
+    background-image: url(https://d1icd6shlvmxi6.cloudfront.net/gsc/8Q5MX4/53/2f/54/532f5456326a498990ea2620a7eed702/images/times/u0_state0.png?pageId=6aa7ecff-1dd9-4d6c-8bdd-7868752c1c7a);
+    background-size: cover;
 }
