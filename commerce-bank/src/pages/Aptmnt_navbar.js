@@ -1,7 +1,7 @@
 import React from "react";
 import "./Aptmnt_navbar.css";
 
-function Aptmnt_navbar() {
+function Aptmnt_navbar(props) {
     return (
         <>
             <ul>
@@ -38,7 +38,7 @@ function Aptmnt_navbar() {
             </ul>
 
             {/* Hero image. Title can be customized. */}
-            <h1 id="hero_img">Placeholder Title</h1>
+            <h1 id="hero_img">{props.title}</h1>
         </>
     );
 }

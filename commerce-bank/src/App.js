@@ -4,7 +4,8 @@ import Aptmnt_navbar from './pages/Aptmnt_navbar';
 function App() {
   return (
     <div className="App">
-      <Aptmnt_navbar/>
+      {/* Change title to whatever the title of the page will be. */}
+      <Aptmnt_navbar title="This Works!"/>
     </div>
   );
 }
