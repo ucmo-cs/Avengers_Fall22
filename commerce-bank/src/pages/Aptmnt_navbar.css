@@ -1,0 +1,29 @@
+/* 
+ * Based on the W3Schools tutorial for how to make a navbar
+ * because I didn't know how.
+ */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px #888888 ;
+}
+li {
+    float: left;
+}
+a {
+    display: block;
+    padding: 8px 16px;
+    color: #136A48;
+    text-align: center;
+}
+a img {
+    max-height: 2em;
+}
+#img_btn {
+    padding-top: 4px;
+    padding-bottom: 0;
+}
