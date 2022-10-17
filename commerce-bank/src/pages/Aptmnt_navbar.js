@@ -1,5 +1,6 @@
 import React from "react";
 import "./Aptmnt_navbar.css";
+import Times from "./Times"; // Change to import all pages when they exist.
 
 function Aptmnt_navbar(props) {
     return (
@@ -7,33 +8,33 @@ function Aptmnt_navbar(props) {
             <ul>
                 <li>
                     {/* Image button */}
-                    <a id="img_btn">
-                        <img src="https://d1icd6shlvmxi6.cloudfront.net/gsc/8Q5MX4/53/2f/54/532f5456326a498990ea2620a7eed702/images/times/u32.jpg?pageId=6aa7ecff-1dd9-4d6c-8bdd-7868752c1c7a"/>
-                    </a>
+                    <button id="img_btn">
+                        <img src="https://d1icd6shlvmxi6.cloudfront.net/gsc/8Q5MX4/53/2f/54/532f5456326a498990ea2620a7eed702/images/times/u32.jpg?pageId=6aa7ecff-1dd9-4d6c-8bdd-7868752c1c7a" alt=""/>
+                    </button>
                 </li>
                 <li>
                     {/* Services */}
-                    <a>
+                    <button>
                         Services
-                    </a>
+                    </button>
                 </li>
                 <li>
                     {/* Locations */}
-                    <a>
+                    <button>
                         Locations
-                    </a>
+                    </button>
                 </li>
                 <li>
                     {/* Times */}
-                    <a>
+                    <button>
                         Times
-                    </a>
+                    </button>
                 </li>
                 <li>
                     {/* Details */}
-                    <a>
+                    <button>
                         More Details
-                    </a>
+                    </button>
                 </li>
             </ul>
 
