@@ -1,6 +1,6 @@
 /* 
  * Based on the W3Schools tutorial for how to make a navbar
- * because I didn't know how.
+ * because I didn't know how. The "a"s control styling for the <Link/>s on the JS.
  */
 ul {
     list-style-type: none;
@@ -15,7 +15,7 @@ ul {
 li {
     float: left;
 }
-Link {
+a {
     display: block;
     padding: 8px 16px;
     color: #136A48;
@@ -23,8 +23,9 @@ Link {
     font-weight: bold;
     background: none;
     border: none;
+    text-decoration: none;
 }
-Link img {
+a img {
     max-height: 2em;
 }
 #img_btn {
