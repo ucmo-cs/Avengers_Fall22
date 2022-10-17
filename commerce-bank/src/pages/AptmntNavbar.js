@@ -1,8 +1,8 @@
 import React from "react";
 import {Outlet, Link} from "react-router-dom";
-import "./Aptmnt_navbar.css";
+import "./AptmntNavbar.css";
 
-function Aptmnt_navbar(props) {
+function AptmntNavbar(props) {
     return (
         <>
             {/* Use Links to make the buttons work. */}
@@ -49,4 +49,4 @@ function Aptmnt_navbar(props) {
     );
 }
 
-export default Aptmnt_navbar;
+export default AptmntNavbar;
