@@ -15,7 +15,7 @@ ul {
 li {
     float: left;
 }
-button {
+Link {
     display: block;
     padding: 8px 16px;
     color: #136A48;
@@ -24,7 +24,7 @@ button {
     background: none;
     border: none;
 }
-button img {
+Link img {
     max-height: 2em;
 }
 #img_btn {
