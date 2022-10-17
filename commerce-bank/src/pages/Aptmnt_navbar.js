@@ -40,11 +40,11 @@ function Aptmnt_navbar(props) {
                     </li>
                 </ul>
             </nav>
-            
-            <Outlet/>
 
             {/* Hero image. Title can be customized. */}
             <h1 id="hero_img">{props.title}</h1>
+            
+            <Outlet/>
         </>
     );
 }
