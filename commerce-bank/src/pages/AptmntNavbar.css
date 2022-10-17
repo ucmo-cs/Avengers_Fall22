@@ -21,6 +21,7 @@ a {
     color: #136A48;
     text-align: center;
     font-weight: bold;
+    text-decoration: none;
 }
 a img {
     max-height: 2em;

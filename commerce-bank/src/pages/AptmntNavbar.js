@@ -1,8 +1,8 @@
 import React from "react";
 import {Outlet, Link} from "react-router-dom";
-import "./Aptmnt_navbar.css";
+import "./AptmntNavbar.css";
 
-function Aptmnt_navbar(props) {
+function AptmntNavbar(props) {
     return (
         <>
             {/* Use Links to make the buttons work. */}
@@ -10,33 +10,33 @@ function Aptmnt_navbar(props) {
                 <ul>
                     <li>
                         {/* Image button */}
-                        <a id="img_btn">
+                        <Link id="img_btn">
                             <img src="https://d1icd6shlvmxi6.cloudfront.net/gsc/8Q5MX4/53/2f/54/532f5456326a498990ea2620a7eed702/images/times/u32.jpg?pageId=6aa7ecff-1dd9-4d6c-8bdd-7868752c1c7a"/>
-                        </a>
+                        </Link>
                     </li>
                     <li>
                         {/* Services */}
-                        <a>
+                        <Link>
                             Services
-                        </a>
+                        </Link>
                     </li>
                     <li>
                         {/* Locations */}
-                        <a>
+                        <Link>
                             Locations
-                        </a>
+                        </Link>
                     </li>
                     <li>
                         {/* Times */}
-                        <a>
+                        <Link>
                             Times
-                        </a>
+                        </Link>
                     </li>
                     <li>
                         {/* Details */}
-                        <a>
+                        <Link>
                             More Details
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </nav>
@@ -49,4 +49,4 @@ function Aptmnt_navbar(props) {
     );
 }
 
-export default Aptmnt_navbar;
+export default AptmntNavbar;
