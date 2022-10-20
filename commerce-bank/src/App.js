@@ -1,6 +1,5 @@
 import './App.css';
 import AptmntNavbar from './pages/AptmntNavbar';
-import ReactDOM from 'react-dom/client';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Times from './pages/Times';
 
