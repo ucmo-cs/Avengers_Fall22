@@ -27,15 +27,19 @@ function Times() {
             [dateTimes.get(extractDate(currentDate)).length]
              = extractTime(currentDate);
     }
+    
     // Create the HTML elements from the dates and times.
     const dateTimesHTML = Array.from(dateTimes.keys()).map((item) => (
         <>
             <h2>{item}</h2>
-            <div className="timeBtnGrp">
+            <ul className="timeBtnGrp">
                 {Array.from(dateTimes.get(item)).map((innerItem) => (
-                    <button>{innerItem}</button>
+                    <li>
+                        <input type="radio" name="timeBtns" id={"timeBtn".concat(Array.from(dateTimes.keys()).indexOf(item)).concat("-").concat(Array.from(dateTimes.get(item)).indexOf(innerItem))}/>
+                        <label for={"timeBtn".concat(Array.from(dateTimes.keys()).indexOf(item)).concat("-").concat(Array.from(dateTimes.get(item)).indexOf(innerItem))}>{innerItem}</label>
+                    </li>
                 ))}
-            </div>
+            </ul>
         </>
     ));
 
@@ -50,9 +54,9 @@ function Times() {
 
             {/* Get dates from server and make them into "h2"s or something. In between,
             have grids of buttons with times that we also get from server. */}
-            <div className="dates_times">
+            <form className="dates_times">
                 {dateTimesHTML}
-            </div>
+            </form>
 
             {/* "Continue" button. Add link to next page when that page exists. */}
             <button className="continueBtn" type="submit">Continue</button>
