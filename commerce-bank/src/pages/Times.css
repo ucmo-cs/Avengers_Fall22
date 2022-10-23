@@ -29,6 +29,14 @@ h2 {
     font-weight: normal;
 }
 
+.calendarPicker {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 35em;
+    margin: auto;
+}
+
 /* This is to undo the styling from the navbar that somehow got applied to 
 this too otherwise. */
 .timeBtnGrp {

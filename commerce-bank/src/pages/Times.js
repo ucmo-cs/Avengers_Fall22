@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from "react";
+import Calendar from 'react-calendar';
 import "./Times.css"
+import 'react-calendar/dist/Calendar.css'
 
 function Times() {
     // Get data using Fetch API.
@@ -51,6 +53,10 @@ function Times() {
             <h1 id="hero_img">Select a Date and Time</h1>
 
             {/* Calendar picker. (Use react-calendar API.) */}
+            <div className="calendarPicker">
+                <Calendar/>
+                <button type="button">Show All Dates and Times</button>
+            </div>
 
             {/* Get dates from server and make them into "h2"s or something. In between,
             have grids of buttons with times that we also get from server. */}
