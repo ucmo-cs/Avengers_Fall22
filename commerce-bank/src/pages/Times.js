@@ -19,6 +19,7 @@ function Times() {
         .then((dates) => setDates(dates));
     }, []);
     */
+
     // Convert the dates to a more useable format.
     const dateTimes = new Map();
     for (let currentDate of dates) {
@@ -30,18 +31,29 @@ function Times() {
              = extractTime(currentDate);
     }
     
+    // Function for the calendar.
+    const [value, setValue] = useState(new Date());
+    const [datesToUse, setDatesToUse] = useState(dateTimes);
+    function onClickDay(nextValue) {
+        setValue(nextValue);
+        setDatesToUse(new Map().set(extractDate(nextValue), dateTimes.get(extractDate(nextValue))));
+        //datesToUse.set(extractDate(nextValue), dateTimes.get(extractDate(nextValue)));
+    }
+
     // Create the HTML elements from the dates and times.
-    const dateTimesHTML = Array.from(dateTimes.keys()).map((item) => (
+    const dateTimesHTML = Array.from(datesToUse.keys()).map((item) => (
         <>
             <h2>{item}</h2>
+            {datesToUse.get(item) ?
             <ul className="timeBtnGrp">
-                {Array.from(dateTimes.get(item)).map((innerItem) => (
+                {Array.from(datesToUse.get(item)).map((innerItem) => (
                     <li>
-                        <input type="radio" name="timeBtns" id={"timeBtn".concat(Array.from(dateTimes.keys()).indexOf(item)).concat("-").concat(Array.from(dateTimes.get(item)).indexOf(innerItem))}/>
-                        <label for={"timeBtn".concat(Array.from(dateTimes.keys()).indexOf(item)).concat("-").concat(Array.from(dateTimes.get(item)).indexOf(innerItem))}>{innerItem}</label>
+                        <input type="radio" name="timeBtns" id={"timeBtn".concat(Array.from(datesToUse.keys()).indexOf(item)).concat("-").concat(Array.from(datesToUse.get(item)).indexOf(innerItem))}/>
+                        <label for={"timeBtn".concat(Array.from(datesToUse.keys()).indexOf(item)).concat("-").concat(Array.from(datesToUse.get(item)).indexOf(innerItem))}>{innerItem}</label>
                     </li>
                 ))}
             </ul>
+            : <p>There are no available appointment times on this date.</p>}
         </>
     ));
 
@@ -54,8 +66,7 @@ function Times() {
 
             {/* Calendar picker. (Use react-calendar API.) */}
             <div className="calendarPicker">
-                <Calendar/>
-                <button type="button">Show All Dates and Times</button>
+                <Calendar onClickDay={onClickDay} value={value}/>
             </div>
 
             {/* Get dates from server and make them into "h2"s or something. In between,
