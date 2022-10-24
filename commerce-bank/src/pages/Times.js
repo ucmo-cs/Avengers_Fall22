@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import Calendar from 'react-calendar';
+import { differenceInCalendarDays } from 'date-fns';
 import "./Times.css"
 import 'react-calendar/dist/Calendar.css'
 
@@ -31,13 +32,21 @@ function Times() {
              = extractTime(currentDate);
     }
     
-    // Function for the calendar.
+    // Function for when the calendar value is changed.
     const [value, setValue] = useState(new Date());
     const [datesToUse, setDatesToUse] = useState(dateTimes);
     function onClickDay(nextValue) {
         setValue(nextValue);
         setDatesToUse(new Map().set(extractDate(nextValue), dateTimes.get(extractDate(nextValue))));
         //datesToUse.set(extractDate(nextValue), dateTimes.get(extractDate(nextValue)));
+    }
+    // Function to show which days on the calendar have available appointment times.
+    function tileContent({ date, view }) {
+        if (view === 'month') {
+            if (dates.find(dDate => (differenceInCalendarDays(dDate, date) === 0))) {
+                return <abbr style={{height: "auto", color: "rgb(12, 154, 215)", fontSize: 16}}>&#x2022;</abbr>
+            }
+        }
     }
 
     // Create the HTML elements from the dates and times.
@@ -66,7 +75,7 @@ function Times() {
 
             {/* Calendar picker. (Use react-calendar API.) */}
             <div className="calendarPicker">
-                <Calendar onClickDay={onClickDay} value={value}/>
+                <Calendar onClickDay={onClickDay} value={value} tileContent={tileContent}/>
             </div>
 
             {/* Get dates from server and make them into "h2"s or something. In between,
