@@ -2,7 +2,7 @@ import React from "react";
 import {Outlet, Link} from "react-router-dom";
 import "./AptmntNavbar.css";
 
-function AptmntNavbar(props) {
+function AptmntNavbar() {
     return (
         <>
             {/* Use Links to make the buttons work. */}
@@ -42,9 +42,6 @@ function AptmntNavbar(props) {
             </nav>
             
             <Outlet/>
-
-            {/* Hero image. Title can be customized. */}
-            <h1 id="hero_img">{props.title}</h1>
         </>
     );
 }
