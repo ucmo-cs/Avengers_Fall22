@@ -33,7 +33,7 @@ function Times() {
     }
     
     // Function for when the calendar value is changed.
-    const [value, setValue] = useState(new Date());
+    const [value, setValue] = useState();
     const [datesToUse, setDatesToUse] = useState(dateTimes);
     function onClickDay(nextValue) {
         setValue(nextValue);
