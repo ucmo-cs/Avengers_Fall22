@@ -1,4 +1,5 @@
 import React from "react";
+import "./Details.css"
 
 function Details() {
     return (
@@ -7,24 +8,31 @@ function Details() {
             <h1 id="hero_img">Just A Few More Details</h1>
 
             {/* The form you fill out. */}
-            <form>
-                <label htmlFor="firstNameField">First name:</label>
-                <input type={"text"} id="firstNameField"/>
-
-                <label htmlFor="lastNameField">Last name:</label>
-                <input type={"text"} id="lastNameField"/>
-
-                <label htmlFor="emailField">Email:</label>
-                <input type={"text"} id="emailField"/>
-                
-                <label htmlFor="phoneField">Phone #:</label>
-                <input type={"text"} id="phoneField"/>
-                
-                <input type={"checkbox"} id="emailConsent"/>
-                <label htmlFor="emailConsent">I consent to receive email updates.</label>
-
-                <input type={"checkbox"} id="phoneConsent"/>
-                <label htmlFor="phoneConsent">I consent to receive text updates.</label>
+            <form id="detailsForm">
+                <div className="detailsCell">
+                    <label htmlFor="firstNameField" className="inputLabel">First name:</label>
+                    <input type={"text"} id="firstNameField"/>
+                </div>
+                <div className="detailsCell">
+                    <label htmlFor="lastNameField" className="inputLabel">Last name:</label>
+                    <input type={"text"} id="lastNameField"/>
+                </div>
+                <div className="detailsCell">
+                    <label htmlFor="emailField" className="inputLabel">Email:</label>
+                    <input type={"text"} id="emailField"/>
+                </div>
+                <div className="detailsCell">
+                    <label htmlFor="phoneField" className="inputLabel">Phone #:</label>
+                    <input type={"text"} id="phoneField"/>
+                </div>
+                <div className="detailsCell">
+                    <input type={"checkbox"} id="emailConsent"/>
+                    <label htmlFor="emailConsent" className="checkboxLabel">I consent to receive email updates.</label>
+                </div>
+                <div className="detailsCell">
+                    <input type={"checkbox"} id="phoneConsent"/>
+                    <label htmlFor="phoneConsent" className="checkboxLabel">I consent to receive text updates.</label>
+                </div>
             </form>
 
             {/* "Continue" button. Add link to next page when that page exists. */}
