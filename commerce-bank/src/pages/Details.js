@@ -25,11 +25,11 @@ function Details() {
                     <label htmlFor="phoneField" className="inputLabel">Phone #:</label>
                     <input type={"text"} id="phoneField"/>
                 </div>
-                <div className="detailsCell">
+                <div className="checkboxCell">
                     <input type={"checkbox"} id="emailConsent"/>
                     <label htmlFor="emailConsent" className="checkboxLabel">I consent to receive email updates.</label>
                 </div>
-                <div className="detailsCell">
+                <div className="checkboxCell">
                     <input type={"checkbox"} id="phoneConsent"/>
                     <label htmlFor="phoneConsent" className="checkboxLabel">I consent to receive text updates.</label>
                 </div>

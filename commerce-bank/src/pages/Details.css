@@ -1,18 +1,27 @@
 #detailsForm {
     display: grid;
-    grid-template-columns: auto auto;
-}
-
-#detailsForm input {
-    max-width: 20em;
-    margin: auto;
+    grid-template-columns: 20em 20em;
 }
 
 .detailsCell {
-    margin: 2em;
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+}
+
+.checkboxCell {
+    display: flex;
+    margin: 1em;
+}
+
+.checkboxCell input[type="checkbox"] {
+    margin-right: 1em;
 }
 
 .inputLabel {
     text-align: left;
-    width: 20em;
+}
+
+.checkboxLabel {
+    text-align: center;
 }
