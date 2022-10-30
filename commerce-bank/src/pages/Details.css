@@ -1,6 +1,8 @@
 #detailsForm {
     display: grid;
     grid-template-columns: 20em 20em;
+    max-width: 40em;
+    margin: auto;
 }
 
 .detailsCell {
