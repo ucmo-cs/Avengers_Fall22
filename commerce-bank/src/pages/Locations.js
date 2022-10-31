@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Locations.css";
 
 class Locations extends React.Component {
@@ -8,15 +9,21 @@ class Locations extends React.Component {
         <div>
           <div id="rectangle">
             <h1>Location 1</h1>
-            <button onClick={this.handleClick}>Select</button>
+          <Link to="/times">
+            <button>Select</button>
+          </Link>
           </div>
           <div id="rectangle">
             <h1>Location 2</h1>
-            <button onClick={this.handleClick}>Select</button>
+            <Link to="/times">
+            <button>Select</button>
+          </Link>
           </div>
           <div id="rectangle">
             <h1>Location 3</h1>
-            <button onClick={this.handleClick}>Select</button>
+            <Link to="/times">
+            <button>Select</button>
+          </Link>
           </div>
         </div>
       );
