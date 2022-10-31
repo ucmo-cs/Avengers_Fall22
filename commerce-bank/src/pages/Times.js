@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import { Link } from "react-router-dom";
 import Calendar from 'react-calendar';
 import { differenceInCalendarDays } from 'date-fns';
 import "./Times.css"
@@ -58,7 +59,7 @@ function Times() {
                 {Array.from(datesToUse.get(item)).map((innerItem) => (
                     <li>
                         <input type="radio" name="timeBtns" id={"timeBtn".concat(Array.from(datesToUse.keys()).indexOf(item)).concat("-").concat(Array.from(datesToUse.get(item)).indexOf(innerItem))}/>
-                        <label for={"timeBtn".concat(Array.from(datesToUse.keys()).indexOf(item)).concat("-").concat(Array.from(datesToUse.get(item)).indexOf(innerItem))}>{innerItem}</label>
+                        <label htmlFor={"timeBtn".concat(Array.from(datesToUse.keys()).indexOf(item)).concat("-").concat(Array.from(datesToUse.get(item)).indexOf(innerItem))}>{innerItem}</label>
                     </li>
                 ))}
             </ul>
@@ -69,8 +70,7 @@ function Times() {
     // Return the page.
     return (
         <>
-
-            {/* Hero image. Title can be customized. */}
+            {/* Hero image. */}
             <h1 id="hero_img">Select a Date and Time</h1>
 
             {/* Calendar picker. (Use react-calendar API.) */}
@@ -85,7 +85,9 @@ function Times() {
             </form>
 
             {/* "Continue" button. Add link to next page when that page exists. */}
-            <button className="continueBtn" type="submit">Continue</button>
+            <Link to="/details">
+                <button className="continueBtn" type="submit">Continue</button>
+            </Link>
         </>
     );
 }
