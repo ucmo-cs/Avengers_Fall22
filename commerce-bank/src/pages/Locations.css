@@ -1,5 +1,10 @@
 
-#rectangle {
+#container {
+    display: grid; /* Remove later if needed */
+    grid-template-rows:    repeat(2, 100px);
+    grid-template-columns: repeat(3, 1fr);
+
+    place-items: center;
     width: 1200px;
     height: 170px;
     background-color: #c9c9c9;
@@ -10,11 +15,52 @@
     box-sizing: border-box;
   }
 
-h1{
-    margin-right: 500px;
+#item{
+    justify-self: right;
+    grid-column: 3;
 }
 
+#item-a{
+    grid-column: 1;
+    justify-self: center;
+}
+
+#item-b{
+    grid-column: 1;
+    grid-row: 2;
+    padding-bottom: 35%;
+    padding-left: 20%;
+}
+
+#item-c{
+    grid-column: 3;
+}
+
+#item-d{
+    grid-area: 2/3;
+}
+
+/*h1{
+    margin-right: 500px;
+    display: inline-block;
+    text-align: left;
+}
+
+h3{
+    text-align: left;
+    display: inline-block;
+    padding-top: 0%;
+    margin-right: 400px;
+}
+
+p{
+    display: inline;
+    text-align: right;
+}*/
+
 button{
-    margin-left: 500px;
-    margin-top: 25px;
+    text-align: center;
+    /*margin-left: 500px;*/
+    margin-right: -750px;
+    margin-bottom: 100px;
 }
