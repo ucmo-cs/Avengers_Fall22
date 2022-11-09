@@ -36,7 +36,7 @@ function Details() {
             </form>
 
             {/* "Continue" button. Add link to next page when that page exists. */}
-            <button className="continueBtn" type="submit">Continue</button>
+            <button className="bookAptmntBtn" type="submit">Book Appointment</button>
         </>
     );
 }
