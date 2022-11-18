@@ -22,11 +22,12 @@ public class Appointment {
 
     private String time;
 
-    private String name;
+    private String firstName;
+    private String lastName;
 
-    private String reason;
+    private String ApptReason;
 
     private String email;
-
+    private String phoneNumber;
 
 }

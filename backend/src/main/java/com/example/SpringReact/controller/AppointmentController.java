@@ -16,7 +16,6 @@ public class AppointmentController {
 
     private final AppointmentService appointmentService;
 
-//    @PostMapping("/customers/{customerId}/appointment")
     @PostMapping("/appointment")
     public ResponseEntity<?> createAppointment(@RequestBody Appointment appointment){
 

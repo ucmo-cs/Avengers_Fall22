@@ -1,6 +1,12 @@
 import React from "react";
 import "./Details.css"
 
+import {selectedLocation} from './Locations' //Receive selected location from locations page
+import {createUser, getAllUsers} from '../services/AppointmentService'
+
+let user = {};
+
+
 function Details() {
     return (
         <>
@@ -11,7 +17,7 @@ function Details() {
             <form id="detailsForm">
                 <div className="detailsCell">
                     <label htmlFor="firstNameField" className="inputLabel">First name:</label>
-                    <input type={"text"} id="firstNameField"/>
+                    <input type={"text"} id="firstNameField" name="firstName"/>
                 </div>
                 <div className="detailsCell">
                     <label htmlFor="lastNameField" className="inputLabel">Last name:</label>
@@ -34,11 +40,32 @@ function Details() {
                     <label htmlFor="phoneConsent" className="checkboxLabel">I consent to receive text updates.</label>
                 </div>
             </form>
-
             {/* "Continue" button. Add link to next page when that page exists. */}
-            <button className="bookAptmntBtn" type="submit">Book Appointment</button>
+            <button className="bookAptmntBtn" type="submit" onClick={(e) => stubbingValues()}>Book Appointment</button>
         </>
     );
+}
+
+const testFunction = (e) => {
+    getAllUsers()
+      .then(response => {
+        console.log(response);
+    });
+}
+
+const testPostFunction = (e) => {
+    createUser(user)
+      .then(response => {
+        console.log(response);
+    });
+}
+
+const stubbingValues = (e) => {
+    user.firstName = document.getElementsByName('firstName').textContent
+    user.lastName = document.getElementById("lastNameField").textContent
+    user.location = selectedLocation
+    console.log(user)
+    testPostFunction()
 }
 
 export default Details;
