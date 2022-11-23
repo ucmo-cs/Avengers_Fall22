@@ -1,0 +1,196 @@
+  #shape {
+    width: 141px;
+    height: 130px;
+    padding: 2px 2px 2px 2px;
+    background-color: #000000;
+    box-sizing: border-box;
+  }
+  #auto-loans {
+    width: 176px;
+    height: 37px;
+    background-color: rgba(255, 255, 255, 0);
+    box-sizing: border-box;
+    font-family: "Arial Bold", "Arial", sans-serif;
+    font-weight: 700;
+    color: #333333;
+    text-align: left;
+    line-height: normal;
+  }
+  #shape {
+    width: 148px;
+    height: 130px;
+    padding: 2px 2px 2px 2px;
+    background-color: #000000;
+    box-sizing: border-box;
+  }
+  #student-loans {
+    width: 224px;
+    height: 37px;
+    background-color: rgba(255, 255, 255, 0);
+    box-sizing: border-box;
+    font-family: "Arial Bold", "Arial", sans-serif;
+    font-weight: 700;
+    color: #333333;
+    text-align: left;
+    line-height: normal;
+  }
+  #shape {
+    width: 154px;
+    height: 130px;
+    padding: 2px 2px 2px 2px;
+    background-color: #000000;
+    box-sizing: border-box;
+  }
+  #mortgage {
+    width: 154px;
+    height: 37px;
+    background-color: rgba(255, 255, 255, 0);
+    box-sizing: border-box;
+    font-family: "Arial Bold", "Arial", sans-serif;
+    font-weight: 700;
+    color: #333333;
+    text-align: left;
+    line-height: normal;
+  }
+  #shape {
+    width: 85px;
+    height: 121px;
+    padding: 2px 2px 2px 2px;
+    background-color: #000000;
+    box-sizing: border-box;
+  }
+  #checking-account {
+    width: 154px;
+    height: 62px;
+    background-color: rgba(255, 255, 255, 0);
+    box-sizing: border-box;
+    font-family: "Arial Bold", "Arial", sans-serif;
+    font-weight: 700;
+    color: #333333;
+    text-align: left;
+    line-height: normal;
+  }
+  #shape {
+    width: 126px;
+    height: 121px;
+    padding: 2px 2px 2px 2px;
+    background-color: #000000;
+    box-sizing: border-box;
+  }
+  #savings-account {
+    width: 132px;
+    height: 66px;
+    background-color: rgba(255, 255, 255, 0);
+    box-sizing: border-box;
+    font-family: "Arial Bold", "Arial", sans-serif;
+    font-weight: 700;
+    color: #333333;
+    text-align: left;
+    line-height: normal;
+  }
+  #shape {
+    width: 144px;
+    height: 83px;
+    padding: 2px 2px 2px 2px;
+    background-color: #000000;
+    box-sizing: border-box;
+  }
+  #credit-card {
+    width: 178px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0);
+    box-sizing: border-box;
+    font-family: "Arial Bold", "Arial", sans-serif;
+    font-weight: 700;
+    color: #333333;
+    text-align: left;
+    line-height: normal;
+  }
+  #shape {
+    width: 131px;
+    height: 114px;
+    padding: 2px 2px 2px 2px;
+    background-color: #000000;
+    box-sizing: border-box;
+  }
+  #investment-account {
+    width: 176px;
+    height: 28px;
+    background-color: rgba(255, 255, 255, 0);
+    box-sizing: border-box;
+    font-family: "Arial Bold", "Arial", sans-serif;
+    font-weight: 700;
+    color: #333333;
+    text-align: left;
+    line-height: normal;
+  }
+  #shape {
+    width: 74px;
+    height: 107px;
+    padding: 2px 2px 2px 2px;
+    background-color: #000000;
+    box-sizing: border-box;
+  }
+  #student-banking {
+     width: 237px;
+     height: 74px;
+     background-color: rgba(255, 255, 255, 0);
+     box-sizing: border-box;
+     font-family: "Arial Bold", "Arial", sans-serif;
+     font-weight: 700;
+     color: #333333;
+     text-align: left;
+     line-height: normal;
+   }
+   #shape {
+     width: 118px;
+     height: 114px;
+     padding: 2px 2px 2px 2px;
+     background-color: #000000;
+     box-sizing: border-box;
+   }
+   #other {
+     width: 90px;
+     height: 37px;
+     background-color: rgba(255, 255, 255, 0);
+     box-sizing: border-box;
+     font-family: "Arial Bold", "Arial", sans-serif;
+     font-weight: 700;
+     color: #333333;
+     text-align: left;
+     line-height: normal;
+   }
+   #continue {
+     width: 140px;
+     height: 40px;
+     padding: 2px 2px 2px 2px;
+     border-radius: 5px;
+     background-color: #1e98d7;
+     box-sizing: border-box;
+     font-family: "Arial", sans-serif;
+     color: #ffffff;
+     text-align: center;
+     line-height: normal;
+   }
+   #hero {
+     width: 1200px;
+     height: 350px;
+     padding: 2px 2px 2px 2px;
+     background-color: rgba(255, 255, 255, 0);
+     box-sizing: border-box;
+   }
+   #select-appointment-t {
+     width: 587px;
+     height: 58px;
+     background-color: rgba(255, 255, 255, 0);
+     box-sizing: border-box;
+     font-family: "Roboto Bold", "Roboto", sans-serif;
+     font-weight: 700;
+     color: #2e3551;
+     text-align: center;
+     line-height: normal;
+   }
+
+
+
+

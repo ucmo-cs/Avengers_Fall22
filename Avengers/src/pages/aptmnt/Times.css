@@ -1,0 +1,76 @@
+/* For the hero image. */
+#hero_img {
+    padding: 3em;
+    margin: 1em;
+    margin-inline: 0;
+    background-image: url(https://d1icd6shlvmxi6.cloudfront.net/gsc/8Q5MX4/53/2f/54/532f5456326a498990ea2620a7eed702/images/times/u0_state0.png?pageId=6aa7ecff-1dd9-4d6c-8bdd-7868752c1c7a);
+    background-size: cover;  
+    /* background-size: 200px 100px; */
+}
+
+input, button {
+    cursor: pointer;
+}
+
+.continueBtn {
+    background-color: rgb(12, 154, 215);
+    border-color: rgb(12, 154, 215);
+    box-shadow: none;
+    border-radius: 5px;
+    border-style: none;
+    margin: 2em;
+    color: white;
+    width: 10em;
+    height: 3em;
+}
+
+h2 {
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+.calendarPicker {
+    max-width: 20em;
+    margin: auto;
+}
+
+/* This is to undo the styling from the navbar that somehow got applied to 
+this too otherwise. */
+.timeBtnGrp {
+    position: static;
+    max-width: 35em;
+    margin: auto;
+    box-shadow: none;
+    display: grid;
+    grid-template-columns: 8em 8em 8em 8em;
+    column-gap: 1em;
+}
+.timeBtnGrp li {
+    float: none;
+    clear: both;
+}
+
+.timeBtnGrp input[name="timeBtns"] {
+    display: none;
+}
+.timeBtnGrp input[name="timeBtns"]+label,
+.timeBtnGrp label {
+    display: inline-block;
+    background-color: white;
+    border-color: #7f7f7f;
+    border-width: 1px;
+    box-shadow: none;
+    border-radius: 5px;
+    border-style: solid;
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
+    padding-left: 3em;
+    padding-right: 3em;
+    cursor: pointer;
+    font-size: 12px;
+}
+.timeBtnGrp input[name="timeBtns"]:checked+label,
+.timeBtnGrp label {
+    background-color: rgb(149, 242, 4);
+}

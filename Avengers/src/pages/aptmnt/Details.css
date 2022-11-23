@@ -1,0 +1,41 @@
+#detailsForm {
+    display: grid;
+    grid-template-columns: 20em 20em;
+    max-width: 40em;
+    margin: auto;
+}
+
+.detailsCell {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+}
+
+.checkboxCell {
+    display: flex;
+    margin: 1em;
+}
+
+.checkboxCell input[type="checkbox"] {
+    margin-right: 1em;
+}
+
+.inputLabel {
+    text-align: left;
+}
+
+.checkboxLabel {
+    text-align: center;
+}
+
+.bookAptmntBtn {
+    background-color: rgb(12, 154, 215);
+    border-color: rgb(12, 154, 215);
+    box-shadow: none;
+    border-radius: 5px;
+    border-style: none;
+    margin: 2em;
+    color: white;
+    width: 10em;
+    height: 3em;
+}
