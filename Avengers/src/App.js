@@ -31,7 +31,7 @@ function App() {
     fname:"",
     lname:"",
     email:"",
-    phone:"",
+    phoneNum:"",
   };  
 
   const [aptmnt, setAptmnt] = useState(appointment);
@@ -84,16 +84,34 @@ function App() {
     console.log(aptmnt);
  }
 
- const updateUser=(e, data)=>{
+ const updateUser=(e, firstName, lastName, emailAddr, phoneNumber)=>{
   
-  e.preventDefault();
-  setAptmnt({...aptmnt,  fname:data});
-  console.log("fname : " + data);
+  //e.preventDefault();
+  // setAptmnt({...aptmnt,  fname:firstName});
+  // setAptmnt({...aptmnt,  lname:lastName});
+  // setAptmnt({...aptmnt,  email:emailAddr});
+  // setAptmnt({...aptmnt,  phoneNum:phoneNumber});
+  aptmnt.fname = firstName;
+  aptmnt.lname = lastName;
+  aptmnt.email = emailAddr;
+  aptmnt.phoneNum = phoneNumber;
   setStatus(3);
 
 
   console.log("4 appointment =>")
-  console.log(aptmnt);
+  postAppt(aptmnt)
+}
+
+async function postAppt(data) {
+  console.log("Appointment: " + aptmnt.fname + " " + aptmnt.lname + " " + aptmnt.email + " " + aptmnt.phoneNum + " " + aptmnt.service + " " + aptmnt.location);
+  const response = await fetch(`http://localhost:8080/appointment`, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(data)
+      
+    })
+    // console.log(response.json());
+  return await response.json();
 }
 
   return (

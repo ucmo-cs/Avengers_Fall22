@@ -23,14 +23,14 @@ public class AppointmentService {
 
         Customer customer;
 
-        System.out.println("id " + appointment.getId());
-        System.out.println("location " + appointment.getLocation() );
-        System.out.println("time " + appointment.getTime() );
-        System.out.println("first name " + appointment.getFirstName() );
-        System.out.println("last name " + appointment.getLastName() );
-        System.out.println("Appointment reason " + appointment.getApptReason() );
-        System.out.println("email " + appointment.getEmail() );
-        System.out.println("phone number " + appointment.getPhoneNumber() );
+//        System.out.println("id " + appointment.getId());
+//        System.out.println("location " + appointment.getLocation() );
+//        System.out.println("time " + appointment.getTime() );
+//        System.out.println("first name " + appointment.getFirstName() );
+//        System.out.println("last name " + appointment.getLastName() );
+//        System.out.println("Appointment reason " + appointment.getApptReason() );
+//        System.out.println("email " + appointment.getEmail() );
+//        System.out.println("phone number " + appointment.getPhoneNumber() );
 
         return appointmentRepository.save(appointment);
     }

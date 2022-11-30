@@ -1,8 +1,27 @@
 import React from "react";
 import "./Details.css"
  
-
 function Details({updateUser}) {
+    const details = {
+        fname:"",
+        lname:"",
+        email:"",
+        phone:"",
+      };  
+    
+    const updateDetails=(e)=>{
+        details.fname = document.getElementsByName("firstName")[0].value
+        details.lname = document.getElementsByName("lastName")[0].value
+        details.email = document.getElementsByName("email")[0].value
+        details.phone = document.getElementsByName("phoneNum")[0].value
+        //console.log(details)
+        updateUser(e, details.fname, details.lname, details.email, details.phone)
+
+        //console.log(valueRef.current.value);
+        //details.fname = 
+
+    }
+
     return (
         <>
             {/* Hero image. */}
@@ -16,15 +35,15 @@ function Details({updateUser}) {
                 </div>
                 <div className="detailsCell">
                     <label htmlFor="lastNameField" className="inputLabel">Last name:</label>
-                    <input type={"text"} id="lastNameField"/>
+                    <input type={"text"} id="lastNameField" name="lastName"/>
                 </div>
                 <div className="detailsCell">
                     <label htmlFor="emailField" className="inputLabel">Email:</label>
-                    <input type={"text"} id="emailField"/>
+                    <input type={"text"} id="emailField" name="email"/>
                 </div>
                 <div className="detailsCell">
                     <label htmlFor="phoneField" className="inputLabel">Phone #:</label>
-                    <input type={"text"} id="phoneField"/>
+                    <input type={"text"} id="phoneField" name="phoneNum"/>
                 </div>
                 <div className="checkboxCell">
                     <input type={"checkbox"} id="emailConsent"/>
@@ -36,14 +55,12 @@ function Details({updateUser}) {
                 </div>
             </form>
             {/* "Continue" button. Add link to next page when that page exists. */}
-            <button className="bookAptmntBtn" type="submit" onClick={(e) => {updateUser(e, 'test user')}}>Book Appointment</button>
+            <button className="bookAptmntBtn" type="submit" onClick={(e) => updateDetails()}>Book Appointment</button>
         </>
     );
 }
 
  
-
- 
- 
+//onClick={(e) => {updateUser(e, )}}
 
 export default Details;
